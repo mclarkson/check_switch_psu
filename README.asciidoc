@@ -4,7 +4,7 @@ Check Switch PSU
 Uses ENTITY-MIB and CISCO-ENTITY-FRU-CONTROL-MIB.
 Only bash and snmpwalk (or snmpbulkwalk) are required.
 
-EXAMPLE OUTPUT
+*EXAMPLE OUTPUT*
 
 ----
 WARNING: All PSUs are present (Nexus 5010 PSU module, 110-208VAC 550w). Status PSU-1:(offDenied) PSU-2:(on).
