@@ -1,0 +1,46 @@
+Check Switch PSU
+----------------
+
+Uses ENTITY-MIB and CISCO-ENTITY-FRU-CONTROL-MIB.
+Only bash and snmpwalk (or snmpbulkwalk) are required.
+
+EXAMPLE OUTPUT
+
+----
+WARNING: All PSUs are present (Nexus 5010 PSU module, 110-208VAC 550w). Status PSU-1:(offDenied) PSU-2:(on).
+
+WARNING: Only one PSU is present.
+
+Unknown: More than 2 PSUs detected. Confused. Aborting.
+
+OK: All PSUs are present (Nexus 5010 PSU module, 110-208VAC 550w). Status PSU-1:(on) PSU-2:(on).
+
+OK: All PSUs are present (6000.00W 220v AC). Status PSU-1:(on) PSU-2:(on) PSU-3:(on).
+----
+
+*MANUAL PAGE*
+
+----
+$ ./check_switch_psu -h
+
+check_switch_psu - Switch PSU checker.
+
+Usage: check_switch_psu [-h] [-l] [-n <NUM>] [-C SECRET] <host|IP>
+
+ -h         :  Display this help text.
+ -v         :  Display the version of this script.
+ -l         :  List hardware.
+ -n <NUM>   :  Number of PSUs to check for (default is 2).
+ -C SECRET  :  Community string.
+
+Check that NUM power supplies are working.
+
+Examples
+
+List device hardware info:
+    check_switch_psu -l -C secret 1.2.3.4
+
+Check number of PSUs on device:
+    check_switch_psu -C secret 1.2.3.4
+----
+
