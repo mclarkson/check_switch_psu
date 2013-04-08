@@ -9,6 +9,16 @@ Check Switch PSU
 Uses ENTITY-MIB and CISCO-ENTITY-FRU-CONTROL-MIB.
 Only bash and snmpwalk (or snmpbulkwalk) are required.
 
+*INSTALL*
+
+Example:
+
+----
+wget https://raw.github.com/mclarkson/check_switch_module/master/check_switch_psu
+chmod +x check_switch_psu
+mv check_switch_psu /usr/lib64/nagios/plugins/
+----
+
 *EXAMPLE OUTPUT*
 
 ----
