@@ -14,7 +14,7 @@ Only bash and snmpwalk (or snmpbulkwalk) are required.
 Example:
 
 ----
-wget https://raw.github.com/mclarkson/check_switch_module/master/check_switch_psu
+wget https://raw.github.com/mclarkson/check_switch_psu/master/check_switch_psu
 chmod +x check_switch_psu
 mv check_switch_psu /usr/lib64/nagios/plugins/
 ----
